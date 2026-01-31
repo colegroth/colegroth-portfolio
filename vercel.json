@@ -1,0 +1,10 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/home", "destination": "/" },
+    { "source": "/narrative", "destination": "/" },
+    { "source": "/commercial", "destination": "/" },
+    { "source": "/scripts", "destination": "/" },
+    { "source": "/profile", "destination": "/" }
+  ]
+}

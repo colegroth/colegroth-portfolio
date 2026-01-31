@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cole Groth | Portfolio</title>
+    
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="apple-touch-icon" href="assets/images/favicon.png">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="prism-container"></div>
+    <div id="navbar-container"></div>
+    <div id="hero-container"></div>
+    <main>
+        <div id="narrative-container"></div>
+        <div id="commercial-container"></div>
+        <div id="screenwriting-container"></div>
+    </main>
+    <div id="about-container"></div>
+    <div id="videoModal" class="modal-overlay" onclick="closeModal()">
+        <div class="modal-box" onclick="event.stopPropagation()">
+            <button class="close-btn" onclick="closeModal()">×</button>
+            <div class="video-frame"><iframe id="modalPlayer" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+        </div>
+    </div>
+    <script type="module" src="js/prism.js"></script>
+    <script src="js/loader.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+    // Parallax Effect for Hero
+    document.addEventListener('mousemove', (e) => {
+        const x = (window.innerWidth - e.pageX * 2) / 100;
+        const y = (window.innerHeight - e.pageY * 2) / 100;
+
+        const name = document.querySelector('.big-name');
+        const eyebrow = document.querySelector('.eyebrow');
+        const bio = document.querySelector('.hero-bio');
+
+        if(name) name.style.transform = `translate(${x * 2}px, ${y * 2}px)`;
+        if(eyebrow) eyebrow.style.transform = `translate(${x * 1.5}px, ${y * 1.5}px)`;
+        if(bio) bio.style.transform = `translate(${x}px, ${y}px)`;
+    });
+</script>
+</body>
+</html>
