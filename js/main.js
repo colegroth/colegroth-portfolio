@@ -1,4 +1,7 @@
 const videoMap = {
+    'keira-cole': 'https://www.youtube.com/embed/GoR7BLJKGac',
+    'partners-crime': 'https://www.youtube.com/embed/A5j-GwsAWys',
+    'orange-blue-26': 'https://www.youtube.com/embed/WanV_HPvcUo',
     'gators-spring': 'https://www.youtube.com/embed/TKTtru1CUHw',
     'disney': 'https://www.youtube.com/embed/qcL2K3PCG6U',
     'gators-fall': 'https://www.youtube.com/embed/5NSpI2UnDFE',
