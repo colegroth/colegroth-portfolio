@@ -21,29 +21,31 @@
         <div id="screenwriting-container"></div>
     </main>
     <div id="about-container"></div>
+    
     <div id="videoModal" class="modal-overlay" onclick="closeModal()">
         <div class="modal-box" onclick="event.stopPropagation()">
             <button class="close-btn" onclick="closeModal()">×</button>
             <div class="video-frame"><iframe id="modalPlayer" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
         </div>
     </div>
+    
     <script type="module" src="js/prism.js"></script>
     <script src="js/loader.js"></script>
     <script src="js/main.js"></script>
     <script>
-    // Parallax Effect for Hero
-    document.addEventListener('mousemove', (e) => {
-        const x = (window.innerWidth - e.pageX * 2) / 100;
-        const y = (window.innerHeight - e.pageY * 2) / 100;
+        // Parallax Effect for Hero
+        document.addEventListener('mousemove', (e) => {
+            const x = (window.innerWidth - e.pageX * 2) / 100;
+            const y = (window.innerHeight - e.pageY * 2) / 100;
 
-        const name = document.querySelector('.big-name');
-        const eyebrow = document.querySelector('.eyebrow');
-        const bio = document.querySelector('.hero-bio');
+            const name = document.querySelector('.big-name');
+            const eyebrow = document.querySelector('.eyebrow');
+            const bio = document.querySelector('.hero-bio');
 
-        if(name) name.style.transform = `translate(${x * 2}px, ${y * 2}px)`;
-        if(eyebrow) eyebrow.style.transform = `translate(${x * 1.5}px, ${y * 1.5}px)`;
-        if(bio) bio.style.transform = `translate(${x}px, ${y}px)`;
-    });
-</script>
+            if(name) name.style.transform = `translate(${x * 2}px, ${y * 2}px)`;
+            if(eyebrow) eyebrow.style.transform = `translate(${x * 1.5}px, ${y * 1.5}px)`;
+            if(bio) bio.style.transform = `translate(${x}px, ${y}px)`;
+        });
+    </script>
 </body>
 </html>
